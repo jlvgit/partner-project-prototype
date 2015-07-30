@@ -1,0 +1,12 @@
+<h1>Select a Scorecard</h1>
+
+<%= link_to "Add a new scorecard", new_scorecard_path %>
+
+<table>
+<% @scorecard.order("LOWER(name)").each  do |card| %>
+  <tr>
+    <td><%= link_to "#{card.name}", scorecard_path(@scorecard) %></td>
+    <td><%= card.position %></td>
+  </tr>
+ <% end %>
+</table>

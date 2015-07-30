@@ -1,0 +1,23 @@
+<%= form_for(@scorecard) do |f| %>
+<%= f.select :industry, ['Option1', 'Option2']%><br>
+<br>
+<div class="field">
+    <%= f.label :name, "Scorecard Name" %><br>
+    <%= f.text_field :name %>
+</div><br>
+<div class="field">
+    <%= f.label :attribute_name, "1st Attribute" %><br>
+    <%= f.text_field :attribute_name %>
+</div><br>
+<div class="field">
+    <%= f.label :attribute_name, "2nd Attribute" %><br>
+    <%= f.text_field :attribute_name %>
+</div><br>
+<div class="field">
+    <%= f.label :position %><br>
+    <%= f.text_field :position %>
+</div><br>
+<div class="actions">
+    <%= f.submit %>
+</div>
+<% end %>
