@@ -1,21 +1,28 @@
 <%= form_for(@scorecard) do |f| %>
-<%= f.select :industry, ['Option1', 'Option2']%><br>
+<%= f.select :industry, ['Technology', 'Medicine', 'Hospitality', 'Sales']%><br>
 <br>
 <div class="field">
     <%= f.label :name, "Scorecard Name" %><br>
     <%= f.text_field :name %>
-</div><br>
+</div>
 <div class="field">
-    <%= f.label :attribute_name, "1st Attribute" %><br>
-    <%= f.text_field :attribute_name %>
-</div><br>
-<div class="field">
-    <%= f.label :attribute_name, "2nd Attribute" %><br>
-    <%= f.text_field :attribute_name %>
-</div><br>
-<div class="field">
-    <%= f.label :position %><br>
+    <%= f.label :position, "Position" %><br>
     <%= f.text_field :position %>
+</div><br><br>
+<div class="field">
+    <%= f.text_field :attribute_name, :value=> "Relevant Experience" %>
+</div><br>
+<div class="field">
+    <%= f.text_field :attribute_name, :value=> "Communication Skills" %>
+</div><br>
+<div class="field">
+    <%= f.text_field :attribute_name, :value=> "Knowledge of Company" %>
+</div><br>
+<div class="field">
+    <%= f.text_field :attribute_name, :value=> "Enthusiasm" %>
+</div><br>
+<div class="field">
+    <%= f.text_field :attribute_name, :value=> "Cultural Fit" %>
 </div><br>
 <div class="actions">
     <%= f.submit %>
