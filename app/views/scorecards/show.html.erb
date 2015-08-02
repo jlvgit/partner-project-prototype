@@ -1,2 +1,66 @@
-<h3> No? </h3>
-<%= render 'show' %>
+
+<%= link_to "Edit this Scorecard", scorecard_path %>
+<br>
+<%= link_to "Create a new candidate using this Scorecard", new_candidate_path %>
+<br><br>
+<table>
+  <thead>Scorecard Name</thead>
+  <tr>
+  <td>Position</td>
+  <td>Date</td>
+  </tr>
+
+  <tr>
+    <td>Name of Candidate</td>
+    <td>Name of Interviewer</td>
+  </tr>
+</table>
+<br>
+<table>
+  <thead>Relevant Experience</thead>
+  <tr>
+  <td><input type="checkbox" name="attribute1" value="1">1</td>
+  <td><input type="checkbox" name="attribute1" value="2">2</td>
+  <td><input type="checkbox" name="attribute1" value="3">3</td>
+  <td><input type="checkbox" name="attribute1" value="4">4</td>
+  <td><input type="checkbox" name="attribute1" value="5">5</td>
+  <td><%= text_area_tag(:message, "Comments", size: "20x4") %></td>
+  </tr>
+</table>
+<table>
+  <thead>Communication Skills</thead>
+  <td><input type="checkbox" name="attribute2" value="1">1</td>
+  <td><input type="checkbox" name="attribute2" value="2">2</td>
+  <td><input type="checkbox" name="attribute2" value="3">3</td>
+  <td><input type="checkbox" name="attribute2" value="4">4</td>
+  <td><input type="checkbox" name="attribute2" value="5">5</td>
+  <td><%= text_area_tag(:message, "Comments", size: "20x4") %></td>
+</table>
+<table>
+  <thead>Knowledge of Company</thead>
+  <td><input type="checkbox" name="attribute3" value="1">1</td>
+  <td><input type="checkbox" name="attribute3" value="2">2</td>
+  <td><input type="checkbox" name="attribute3" value="3">3</td>
+  <td><input type="checkbox" name="attribute3" value="4">4</td>
+  <td><input type="checkbox" name="attribute3" value="5">5</td>
+  <td><%= text_area_tag(:message, "Comments", size: "20x4") %></td>
+  </table>
+<table>
+  <thead>Enthusiasm</thead>
+  <td><input type="checkbox" name="attribute4" value="1">1</td>
+  <td><input type="checkbox" name="attribute4" value="2">2</td>
+  <td><input type="checkbox" name="attribute4" value="3">3</td>
+  <td><input type="checkbox" name="attribute4" value="4">4</td>
+  <td><input type="checkbox" name="attribute4" value="5">5</td>
+  <td><%= text_area_tag(:message, "Comments", size: "20x4") %></td>
+  </table>
+<table>
+  <thead>Cultural Fit</thead>
+  <td><input type="checkbox" name="attribute5" value="1">1</td>
+  <td><input type="checkbox" name="attribute5" value="2">2</td>
+  <td><input type="checkbox" name="attribute5" value="3">3</td>
+  <td><input type="checkbox" name="attribute5" value="4">4</td>
+  <td><input type="checkbox" name="attribute5" value="5">5</td>
+  <td><%= text_area_tag(:message, "Comments", size: "20x4") %></td>
+</table>
+

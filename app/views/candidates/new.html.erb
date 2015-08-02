@@ -1,0 +1,67 @@
+<%= form_for(@candidate) do |f| %>
+  <table>
+    <thead>Scorecard Name</thead>
+    <tr>
+      <td>Position</td>
+      <td><%= f.text_field :interview_date, :value => "Date" %></td>
+    </tr>
+    <tr>
+      <td><%= f.text_field :name, :value => "Candidate name" %></td>
+      <td><%= f.text_field :interviewer, :value => "Interviewer Name" %></td>
+    </tr>
+  </table><br><br>
+  <table>
+    <thead>Relevant Experience</thead>
+    <tr>
+      <td><%= f.radio_button(:score_01, "1") %><%= label_tag(:score_01, "1") %></td>
+      <td><%= f.radio_button(:score_01, "2") %><%= label_tag(:score_01, "2") %></td>
+      <td><%= f.radio_button(:score_01, "3") %><%= label_tag(:score_01, "3") %></td>
+      <td><%= f.radio_button(:score_01, "4") %><%= label_tag(:score_01, "4") %></td>
+      <td><%= f.radio_button(:score_01, "5") %><%= label_tag(:score_01, "5") %></td>
+      <td><%= text_area_tag(:message, "Comments", size: "20x4") %></td>
+    </tr>
+  <table>
+    <thead>Communication Skills</thead>
+    <tr>
+      <td><%= f.radio_button(:score_02, "1") %><%= label_tag(:score_02, "1") %></td>
+      <td><%= f.radio_button(:score_02, "2") %><%= label_tag(:score_02, "2") %></td>
+      <td><%= f.radio_button(:score_02, "3") %><%= label_tag(:score_02, "3") %></td>
+      <td><%= f.radio_button(:score_02, "4") %><%= label_tag(:score_02, "4") %></td>
+      <td><%= f.radio_button(:score_02, "5") %><%= label_tag(:score_02, "5") %></td>
+      <td><%= text_area_tag(:message, "Comments", size: "20x4") %></td>
+    </tr>
+  <table>
+    <thead>Knowledge of Company</thead>
+    <tr>
+      <td><%= f.radio_button(:score_03, "1") %><%= label_tag(:score_03, "1") %></td>
+      <td><%= f.radio_button(:score_03, "2") %><%= label_tag(:score_03, "2") %></td>
+      <td><%= f.radio_button(:score_03, "3") %><%= label_tag(:score_03, "3") %></td>
+      <td><%= f.radio_button(:score_03, "4") %><%= label_tag(:score_03, "4") %></td>
+      <td><%= f.radio_button(:score_03, "5") %><%= label_tag(:score_03, "5") %></td>
+      <td><%= text_area_tag(:message, "Comments", size: "20x4") %></td>
+    </tr>
+  <table>
+    <thead>Enthusiasm</thead>
+    <tr>
+      <td><%= f.radio_button(:score_04, "1") %><%= label_tag(:score_04, "1") %></td>
+      <td><%= f.radio_button(:score_04, "2") %><%= label_tag(:score_04, "2") %></td>
+      <td><%= f.radio_button(:score_04, "3") %><%= label_tag(:score_04, "3") %></td>
+      <td><%= f.radio_button(:score_04, "4") %><%= label_tag(:score_04, "4") %></td>
+      <td><%= f.radio_button(:score_04, "5") %><%= label_tag(:score_04, "5") %></td>
+      <td><%= text_area_tag(:message, "Comments", size: "20x4") %></td>
+    </tr>
+  <table>
+    <thead>Cultural Fit</thead>
+    <tr>
+      <td><%= f.radio_button(:score_05, "1") %><%= label_tag(:score_05, "1") %></td>
+      <td><%= f.radio_button(:score_05, "2") %><%= label_tag(:score_05, "2") %></td>
+      <td><%= f.radio_button(:score_05, "3") %><%= label_tag(:score_05, "3") %></td>
+      <td><%= f.radio_button(:score_05, "4") %><%= label_tag(:score_05, "4") %></td>
+      <td><%= f.radio_button(:score_05, "5") %><%= label_tag(:score_05, "5") %></td>
+      <td><%= text_area_tag(:message, "Comments", size: "20x4") %></td>
+    </tr><br>
+  </table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

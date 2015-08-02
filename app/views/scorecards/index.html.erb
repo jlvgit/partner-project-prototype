@@ -3,9 +3,15 @@
 <%= link_to "Add a new scorecard", new_scorecard_path %>
 <br><br>
 <table>
+  <thead>
+  <tr>
+      <th>Scorecard</th>
+      <th>Position</th>
+      </tr>
+  </thead>
 <% @scorecard.order("LOWER(name)").each  do |card| %>
   <tr>
-    <td><%= link_to "#{card.name}", scorecard_path(@scorecard) %></td>
+    <td><%= link_to "#{card.name}", new_candidate_path %></td>
     <td><%= card.position %></td>
     <td><%= link_to "Show Candidates", candidates_path %></td>
   </tr>

@@ -10,9 +10,21 @@ class ScorecardsController < ApplicationController
   end
 
   def create
-    @scorecard = Scorecard.build.new(scorecard_params)
+    @scorecard = Scorecard.new(scorecard_params)
     if @scorecard.save
       redirect_to scorecards_path, alert: "New Scorecard Saved!"
+    else
+      render :new
+    end
+  end
+
+  def update
+    @scorecard = Scorecard.new
+  end
+
+  def edit
+    if @scorecard.update(scorecard_params)
+      redirect_to scorecards_path, alert: "Scorecard Updated."
     else
       render :new
     end
@@ -22,7 +34,6 @@ class ScorecardsController < ApplicationController
     @scorecard = Scorecard.new
   end
 
-
 private
 
   def set_scorecard
@@ -30,7 +41,7 @@ private
   end
 
   def scorecard_params
-    params.require(:scorecard).permit(:id, :position, :industry, :attribute_name, :name, atrributes: [:attribute])
+    params.require(:scorecard).permit(:id, :position, :industry, :attribute_name, :name)
   end
 
 end

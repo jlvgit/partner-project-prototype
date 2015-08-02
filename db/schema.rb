@@ -11,22 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150730174123) do
+ActiveRecord::Schema.define(version: 20150802173323) do
 
   create_table "attributes", force: :cascade do |t|
-    t.string   "attribute_text"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "attribute_01"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "attribute_02"
+    t.string   "attribute_03"
+    t.string   "attribute_04"
+    t.string   "attribute_05"
   end
 
   create_table "candidates", force: :cascade do |t|
     t.integer  "scorecard_id"
-    t.integer  "scores"
+    t.integer  "score_01"
     t.datetime "interview_date"
     t.string   "name"
     t.string   "interviewer"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.integer  "score_02"
+    t.integer  "score_03"
+    t.integer  "score_04"
+    t.integer  "score_05"
   end
 
   create_table "questions", force: :cascade do |t|
