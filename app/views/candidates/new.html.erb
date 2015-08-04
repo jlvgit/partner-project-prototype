@@ -1,12 +1,12 @@
 <%= form_for(@candidate) do |f| %>
   <table>
-    <thead>Scorecard Name</thead>
+    <thead><h5> Scorecard Name </h5></thead>
     <tr>
-      <td>Position</td>
-      <td><%= f.text_field :interview_date, :value => "Date" %></td>
+      <td><em>Position</em></td>
+      <td><%= f.date_select :interview_date %></td>
     </tr>
     <tr>
-      <td><%= f.text_field :name, :value => "Candidate name" %></td>
+      <td><%= f.text_field :name, :value => "Candidate Full Name" %></td>
       <td><%= f.text_field :interviewer, :value => "Interviewer Name" %></td>
     </tr>
   </table><br><br>
@@ -63,5 +63,8 @@
   </table>
   <div class="actions">
     <%= f.submit %>
+    <%= link_to "Edit this Scorecard", scorecards_path, class:"btn btn-default" %>
+    <%= f.hidden_field :scorecard_id, :value => @scorecard.id %>
   </div>
+
 <% end %>

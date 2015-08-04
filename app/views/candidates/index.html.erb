@@ -1,1 +1,12 @@
-<h1>Test</h1>
+<h1>Candidates for this Scorecard</h1>
+
+<table>
+<% @candidate.order("LOWER(name)").each  do |cand| %>
+  <tr>
+    <td><%= cand.name %></td>
+    <td><input id="accept" name="accept" type="checkbox" value=<%="#{cand.id}"%> /></td>
+  </tr>  
+<% end %>
+</table>
+<%= button_to "Compare Candidates", compare_path %>
+<%= link_to "Back", scorecards_path, class:"btn btn-default" %>

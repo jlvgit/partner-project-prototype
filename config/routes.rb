@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :scorecards
 
   root 'scorecards#index'
-
+  post '/compare' => 'candidates#compare'
 end

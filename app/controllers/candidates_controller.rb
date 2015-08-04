@@ -1,19 +1,29 @@
 class CandidatesController < ApplicationController
+  def index
+    @candidate = Candidate.all
+  end
 
   def new
     @candidate = Candidate.new
+    @scorecard = Scorecard.new(params[:id])
   end
 
   def create
     @candidate = Candidate.new(candidate_params)
     if @candidate.save
-      redirect_to candidate_path, alert: "New Candidate Saved!"
+      redirect_to candidates_path, alert: "New Candidate Saved!"
     else
       render :new
     end
-    
   end
 
+  def show
+    @candidate = Candidate.new
+  end
+
+  def compare
+    @candidate = Candidate.all
+  end
 
   private
 

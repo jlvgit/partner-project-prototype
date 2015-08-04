@@ -2,13 +2,14 @@
 <%= f.select :industry, ['Technology', 'Medicine', 'Hospitality', 'Sales']%><br>
 <br>
 <div class="field">
-    <%= f.label :name, "Scorecard Name" %><br>
+    <%= f.label :name, "Scorecard Name" %>
     <%= f.text_field :name %>
 </div>
 <div class="field">
-    <%= f.label :position, "Position" %><br>
+    <%= f.label :position, "Position" %>
     <%= f.text_field :position %>
-</div><br><br>
+</div><br>
+<%= f.label "Attributes" %>
 <div class="field">
     <%= f.text_field :attribute_01, :value=> "Relevant Experience" %>
 </div><br>

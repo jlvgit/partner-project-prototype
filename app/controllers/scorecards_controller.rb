@@ -18,18 +18,6 @@ class ScorecardsController < ApplicationController
     end
   end
 
-  def update
-    @scorecard = Scorecard.new
-  end
-
-  def edit
-    if @scorecard.update(scorecard_params)
-      redirect_to scorecards_path, alert: "Scorecard Updated."
-    else
-      render :new
-    end
-  end
-
   def show
     @scorecard = Scorecard.new
   end
